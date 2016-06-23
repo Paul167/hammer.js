@@ -1,4 +1,4 @@
-/*! Hammer.JS - v2.0.7 - 2016-04-22
+/*! Hammer.JS - v2.0.8 - 2016-05-18
  * http://hammerjs.github.io/
  *
  * Copyright (c) 2016 Jorik Tangelder;
@@ -809,7 +809,7 @@ inherit(MouseInput, Input, {
             this.pressed = true;
         }
 
-        if (eventType & INPUT_MOVE && ev.which !== 1) {
+        if (eventType & INPUT_MOVE && ev.button !== 0) {
             eventType = INPUT_END;
         }
 
@@ -2145,7 +2145,7 @@ function Hammer(element, options) {
 /**
  * @const {string}
  */
-Hammer.VERSION = '2.0.7';
+Hammer.VERSION = '2.0.8';
 
 /**
  * default settings
